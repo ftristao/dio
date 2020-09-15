@@ -10,9 +10,9 @@ export default {
         const {user } = data;
         await Mail.sendMail({
             from: 'DIO <bootcamp@dio.com.br>',
-            to: `${user.name} <$email}>`,
-            subject: 'Cadastro de usuário',
-            html: `Olá, ${user.name}, bem vindo ao Teste. Suna nova senha é ${user.password}`
+            to: `${user.name} <${user.email}>`,
+            subject: 'Sugestão de senha segura',
+            html: `Olá, ${user.name}, sua nova senha poderia ser ${user.password}`
           });
     }
 }
