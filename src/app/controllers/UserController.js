@@ -10,7 +10,8 @@ export default {
           password: passwordGenerator(15, false)
       };
 
-      await Queue.add('RegistrationMail', { user});
+      await Queue.add('RegistrationMail', { user });
+    
       return res.json(user);
     }
 }
